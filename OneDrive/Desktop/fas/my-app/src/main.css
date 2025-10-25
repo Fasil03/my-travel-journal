@@ -1,0 +1,195 @@
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Header styling */
+header {
+  background-color: rgb(151, 96, 202);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  padding: 0 20px;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* Container for each card */
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 900px;
+  gap: 20px;
+  transition: transform 0.3s ease;
+  background-color: #fff;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+/* Main image */
+.main-images {
+  width: 50%;
+  height: 300px;
+  max-height: 400px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+/* Inner content */
+.div-com {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+  transition: all 0.3s ease;
+}
+
+/* Country info line */
+.country-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sub-image {
+  width: 40px;
+  height: 25px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Country name */
+span {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Link */
+.a-tag {
+  text-decoration: none;
+  font-weight: bold;
+  color: #9740ca;
+  transition: color 0.3s ease;
+}
+
+.a-tag:hover {
+  color: #5e2f90;
+}
+
+/* Heading */
+.sub-h2 {
+  font-size: 22px;
+  color: #222;
+  margin: 5px 0;
+}
+
+/* Paragraphs */
+.main-p,
+.sub-p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* ✅ Responsive shrink for smaller screens */
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .main-images {
+    width: 45%;
+    max-height: 320px;
+  }
+
+  .sub-h2 {
+    font-size: 20px;
+  }
+
+  .main-p,
+  .sub-p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-images {
+    width: 30%;
+    max-height: 250px;
+  }
+
+  .sub-h2 {
+    font-size: 18px;
+  }
+
+  .main-p,
+  .sub-p,
+  span,
+  .a-tag {
+    font-size: 14px;
+  }
+
+  .sub-image {
+    width: 30px;
+    height: 18px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 8px;
+    gap: 10px;
+  }
+
+  .main-images {
+    width: 38%;
+    max-height: 200px;
+  }
+
+  .div-com {
+    gap: 6px;
+  }
+
+  .sub-h2 {
+    font-size: 16px;
+  }
+
+  .main-p,
+  .sub-p,
+  span,
+  .a-tag {
+    font-size: 13px;
+  }
+}
+

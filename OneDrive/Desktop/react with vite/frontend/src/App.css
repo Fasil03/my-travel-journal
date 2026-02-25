@@ -1,0 +1,49 @@
+/* Hero background only on home page */
+.hero-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Scrollable content only for home page */
+.scrollable-content {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+
+.content-spacer {
+  height: 100vh;
+  width: 100%;
+  background: transparent;
+}
+
+/* Regular pages (Projects, Contact) - no fixed background */
+.regular-page {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  padding-top: 80px; /* Adjust based on your navbar height */
+  background: var(--page-bg); /* Use your theme color */
+  pointer-events: auto;
+}
+
+/* If you're using theme, make sure to define CSS variables */
+:root {
+  --page-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+  --page-bg: #1a1a1a;
+}
+
+/* Global fix for interactive elements */
+a, button, .clickable, [onclick], [role="button"] {
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 1001 !important;
+}

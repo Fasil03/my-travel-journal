@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Link Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        a, button { 
+            display: inline-block; 
+            margin: 10px; 
+            padding: 10px 20px; 
+            background: #667eea; 
+            color: white; 
+            text-decoration: none; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer;
+        }
+        a:hover, button:hover { background: #5a67d8; }
+    </style>
+</head>
+<body>
+    <h1>Email Link Test</h1>
+    <p>Test different email link formats:</p>
+    
+    <a href="mailto:fasilalemye@gmail.com">Direct mailto link</a><br><br>
+    
+    <button onclick="window.open('mailto:fasilalemye@gmail.com')">JavaScript window.open</button><br><br>
+    
+    <button onclick="window.location.href='mailto:fasilalemye@gmail.com'">JavaScript location.href</button><br><br>
+    
+    <button onclick="testEmail()">Function test</button>
+    
+    <script>
+        function testEmail() {
+            console.log('Testing email...');
+            try {
+                window.location.href = 'mailto:fasilalemye@gmail.com';
+                console.log('Email opened successfully');
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error opening email: ' + error.message);
+            }
+        }
+    </script>
+</body>
+</html>
